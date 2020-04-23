@@ -17,7 +17,9 @@ public class No2108 {
 		int[] numList = new int[N];
 		double numSum = 0;
 		int swap = 0;
+		int temp = 0;
 		int count = 0;
+		int subCount = 0;
 		int numFrequency = 0;
 
 		for (int i = 0; i < numList.length; i++) {
@@ -35,24 +37,37 @@ public class No2108 {
 			numSum += numList[i];
 			System.out.println(numList[i]);
 		}
-		
+		System.out.println();
 		for(int i=0; i<numList.length; i++) {
 			int localCount = 0;
+			
 			for(int j=0; j<numList.length; j++) {
 				if(numList[i] == numList[j]) {
 					localCount++;
 				}
 			}
-			if(count < localCount && localCount > 1) {
+			
+			if(count <= localCount && localCount > 1) {
+				System.out.println(numList[i]);
 				count = localCount;
-				numFrequency = numList[i];
+				if(count == localCount && temp != numList[i]) {
+					temp = numList[i];
+					++subCount;
+					System.out.println("subCount =="+subCount);
+					if(subCount == 2) {
+						numFrequency = numList[i];
+					}
+				}else {
+					numFrequency = numList[i];
+				}
 			}else if (numList.length == 1) {
 				numFrequency = numList[0];
 			}else {
 				numFrequency = numList[1];
 			}
 		}
-//		System.out.printf("%.0f\n",Math.round(numSum/N));
+		scan.close();
+		System.out.println();
 		System.out.println(Math.round(numSum/N));
 		System.out.println(numList[(N/2)]);
 		System.out.println(numFrequency);
