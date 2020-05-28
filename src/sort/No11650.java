@@ -1,5 +1,7 @@
 package sort;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class No11650 {
@@ -7,62 +9,26 @@ public class No11650 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int size = scan.nextInt();
-		scan.nextLine();
-		String[] positionList = new String[size];
-		String temp = "";
-		
-//		String test1 = "-1";
-//		int test2 = Integer.parseInt("-"+test1.charAt(1)+"");
-//		System.out.println(test2);
+		int[][] positionList = new int[size][2];
 		
 		for(int i=0; i<size; i++) {
-			positionList[i] = scan.nextLine().trim();
-		}
-		
-		for(int i=0; i<size; i++) {
-			for(int j=i+1; j<size; j++) {
-				int tempI = Integer.parseInt(positionList[i].charAt(0)+"");
-				int tempJ = Integer.parseInt(positionList[j].charAt(0)+"");
-				int tempI1 = Integer.parseInt(positionList[i].charAt(1)+"");
-				int tempJ1 = Integer.parseInt(positionList[j].charAt(1)+"");
-				
-				if(positionList[i].charAt(0) =='-') {
-					tempI = Integer.parseInt("-"+positionList[i].charAt(1)+"");
-				}
-				if(positionList[j].charAt(0) =='-') {
-					tempI = Integer.parseInt("-"+positionList[i].charAt(1)+"");
-				}
-				
-				if(tempI > tempJ) {
-					temp = positionList[i];
-					positionList[i] = positionList[j];
-					positionList[j] = temp;
-				}else if(tempI == tempJ){
-					if(tempI1 > tempJ1) {
-						temp = positionList[i];
-						positionList[i] = positionList[j];
-						positionList[j] = temp;
-					}
-				}
-				
-				
-//				if(positionList[i].charAt(0) == '-') {
-//					
-//				}
-//				if(Integer.parseInt(positionList[i].charAt(0)+"") > Integer.parseInt(positionList[j].charAt(0)+"")) {
-//					temp = positionList[i];
-//					positionList[i] = positionList[j];
-//					positionList[j] = temp;
-//				}else if(Integer.parseInt(positionList[i].charAt(0)+"") == Integer.parseInt(positionList[j].charAt(0)+"")){
-//					if(Integer.parseInt(positionList[i].charAt(1)+"") > Integer.parseInt(positionList[j].charAt(1)+"")) {
-//						temp = positionList[i];
-//						positionList[i] = positionList[j];
-//						positionList[j] = temp;
-//					}
-//				}
+			for(int j=0; j<2; j++) {
+				positionList[i][j]=scan.nextInt();
 			}
-			System.out.println(positionList[i]);
 		}
 		scan.close();
+		Arrays.sort(positionList,new Comparator<int[]>() { //Comparator 인터페이스 재정의
+
+			@Override
+			public int compare(int[] x, int[] y) {
+				 if(x[0]==y[0]) {// x좌표의 값이 같다면 y좌표를 기준으로 정렬		
+					return Integer.compare(x[1], y[1]);
+				 }
+				return Integer.compare(x[0], y[0]); // 나머지는 x좌표를 기준으로 정렬
+			}		
+		});
+		for(int i=0;i<positionList.length;i++) {
+				System.out.println(positionList[i][0]+" "+positionList[i][1]);
+		}
 	}
 }
