@@ -13,6 +13,7 @@ public class SelectionSort {
 			for(int j=i+1; j<numList.length; j++) {
 				if(numList[minNum] > numList[j]) {
 					minNum = j;
+//					System.out.println(minNum);
 				}
 			}
 			if(numList[i] > numList[minNum]) {
