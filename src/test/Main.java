@@ -22,11 +22,16 @@ public class Main {
 		channelManager.addTvRadioList(new TVRadio("TVRadio", 3, "I", "KBS"));
 		channelManager.addTvRadioList(new TVRadio("TVRadio", 7, "J", "MBC"));
 		
+		System.out.println("---------------------------------------------------------------------------------------------------------");
 		//오름차순 정렬//
 		channelManager.selectionSort();
 		//검색한 타입 출력//
-		channelManager.searchType(scan.nextLine());
+//		channelManager.searchChannelType(scan.nextLine());
+		System.out.println("---------------------------------------------------------------------------------------------------------");
+		channelManager.searchChannelType("Radio");
+		System.out.println("---------------------------------------------------------------------------------------------------------");
 		//정렬된 List를 체널 아이디로 출력해 보여준다//
 		channelManager.channelName();
+		System.out.println("---------------------------------------------------------------------------------------------------------");
 	}
 }

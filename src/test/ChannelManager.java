@@ -8,33 +8,28 @@ public class ChannelManager {
 	ArrayList<TV> tvList;
 	ArrayList<TVRadio> tvRadioList;
 	LinkedList<Object> totalLink;
-	LinkedList<Object> copyTotalLink;
 	
 	ChannelManager(){
 		this.radioList =  new ArrayList<>();
 		this.tvList = new ArrayList<>();
 		this.tvRadioList = new ArrayList<>();
 		this.totalLink = new LinkedList<>();
-		this.copyTotalLink = new LinkedList<>();
 	}
-	
+	//List에 저장//
 	public void addRadioList(Radio radio) {
 		radioList.add(radio);
-		copyTotalLink.add(radio);
 		totalLink.add(radio);
 	}
-	
 	public void addTvList(TV tv) {
 		tvList.add(tv);
-		copyTotalLink.add(tv);
 		totalLink.add(tv);
 	}
-	
 	public void addTvRadioList(TVRadio tvRadio) {
 		tvRadioList.add(tvRadio);
-		copyTotalLink.add(tvRadio);
 		totalLink.add(tvRadio);
 	}
+	
+	
 	//idScan()메서드를 이용해 ChannelID를 받아와 selectionSort를 이용해 오름차순 정렬//
 	public void selectionSort() {
 		int minNumber;
@@ -42,10 +37,22 @@ public class ChannelManager {
 		for(int i= 0; i<totalLink.size(); i++) {
 			minNumber = i;
 			for(int j= i+1; j<totalLink.size(); j++) {
+				// ChannelID가 같은게 있을경우 처리//
+				if(idScan(minNumber, totalLink.get(minNumber)) == idScan(j, totalLink.get(j))) {
+					if(channelType(minNumber, totalLink.get(minNumber)).equals("TVRadio")) {
+						System.out.println("----");
+						totalLink.remove(j);
+					}else if(channelType(j, totalLink.get(j)) == ("TVRadio")) {
+						totalLink.remove(minNumber);
+					}
+					--j;
+				}
+				// for loop를 돌아 가장 작은 값ㅎ이 있는 index를 구한다//
 				if(idScan(minNumber, totalLink.get(minNumber)) > idScan(j, totalLink.get(j))) {
 					minNumber = j;
 				}
 			}
+			//값을 비교하여 LinkedList에 삽입 , 삭제 작업
 			if(idScan(i, totalLink.get(i)) > idScan(minNumber, totalLink.get(minNumber))) {
 				totalLink.add(i, totalLink.get(minNumber));
 				totalLink.remove(minNumber+1);
@@ -68,8 +75,8 @@ public class ChannelManager {
 			return tvRadio_i.getChannelId();
 		}
 	}
-	
-	public String deldeteIndex(int index, Object obj) {
+	//for loop에서 해당 index와 객체를 받아 해당 객체의 type을 확인하고 channelType을 return한단
+	public String channelType(int index, Object obj) {
 		if(totalLink.get(index).getClass().getName() == TV.class.getName()) {
 			TV tv = (TV)totalLink.get(index);
 			return tv.getChannelType();
@@ -82,12 +89,12 @@ public class ChannelManager {
 		}
 	}
 	
-	public void searchType(String type) {
+	//type을 인자로 받아  해당 문자열이 포함되어 있는 객체를 출력
+	public void searchChannelType(String type) {
 		for(int i=0; i<totalLink.size(); i++) {
 			typeScan(i, totalLink.get(i), type);
 		}
 	}
-	
 	public void typeScan(int index, Object obj, String type) {
 		
 		if(totalLink.get(index).getClass().getName() == TV.class.getName()) {
@@ -108,6 +115,7 @@ public class ChannelManager {
 		}
 	}
 	
+	//ChannelName 출력
 	public void channelName() {
 		for(int i= 0; i<totalLink.size(); i++) {
 			if(totalLink.get(i).getClass().getName() == TV.class.getName()) {
@@ -123,31 +131,4 @@ public class ChannelManager {
 		}
 		
 	}
-
-	public ArrayList<Radio> getRadioList() {
-		return radioList;
-	}
-
-	public void setRadioList(ArrayList<Radio> radioList) {
-		this.radioList = radioList;
-	}
-
-	public ArrayList<TV> getTvList() {
-		return tvList;
-	}
-
-	public void setTvList(ArrayList<TV> tvList) {
-		this.tvList = tvList;
-	}
-
-	public ArrayList<TVRadio> getTvRadioList() {
-		return tvRadioList;
-	}
-
-	public void setTvRadioList(ArrayList<TVRadio> tvRadioList) {
-		this.tvRadioList = tvRadioList;
-	}
-
-	
-	
 }
