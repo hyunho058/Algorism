@@ -13,7 +13,7 @@ public class Main {
 		channelManager.addRadioList(new Radio("Radio", 2, "B", "SBS", 101));
 		channelManager.addRadioList(new Radio("Radio", 1, "C", "MBC", 102));
 		channelManager.addRadioList(new Radio("Radio", 4, "D", "YTN", 103));
-		//TV 방송 목록 추가
+		//TV 방송 목록 추가 
 		channelManager.addTvList(new TV("TV", 5, "E", "KBS", 7, "지상파"));
 		channelManager.addTvList(new TV("TV", 8, "F", "SBS", 5, "지상파"));
 		channelManager.addTvList(new TV("TV", 7, "G", "MBC", 11, "지상파"));

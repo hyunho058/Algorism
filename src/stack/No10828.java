@@ -16,14 +16,76 @@ import java.util.Scanner;
 
 public class No10828 {
 
+	static ArrayList<Integer> numList;
+	
 	public static void main(String[] args) {
-		List<Integer> numList = new ArrayList<Integer>();
-		List<String> stackStatus = new ArrayList<String>();
-		int count = 0;
 		Scanner scan = new Scanner(System.in);
+		int inputSize = scan.nextInt();
+		String command;
+		numList = new ArrayList<>();
 		
-		for(int i = 0; i<count; i++) {
-			
+		for(int i=0; i<=inputSize; i++) {
+			command = scan.nextLine();
+			if(command.contains("push")) {
+				command = command.replace("push", "").trim();
+				push(Integer.parseInt(command));
+			}else if(command.equals("pop")) {
+				System.out.println(pop());
+			}else if(command.equals("size")) {
+				System.out.println(size());
+			}else if(command.equals("empty")) {
+				System.out.println(empty());
+			}else if(command.equals("top")) {
+				System.out.println(top());
+			}
+		}
+		scan.close();
+	}
+	/*
+	 * 정수 x를 스텍에 넣는 연산
+	 */
+	public static void push(int data) {
+		numList.add(data);
+	}
+	/*
+	 * 가장위에있는 정수를 빼고
+	 * 그 수를 출력
+	 * 스텍에 들어있는 정수가 없는경우 -1 출력
+	 */
+	public static int pop() {
+		if(numList.isEmpty()) {
+			return -1;
+		}else {
+			return numList.remove(numList.size()-1);
+		}
+	}
+	/*
+	 * Stack에 들어있는 정수의 개수 출력
+	 */
+	public static int size() {
+		return numList.size();
+	}
+	/*
+	 * 스텍이 비어있으면 1, 아니면 0출력
+	 */
+	public static int empty() {
+		if(numList.isEmpty()) {
+			return 1;
+		}else {
+			return 0;
+		}
+		
+	}
+	/*
+	 * Stack의 가장 위에 있는 정수를 출력
+	 * Stack에 들어있는 정수가 없을 경우-1 출력
+	 */
+	public static int top() {
+		if(numList.isEmpty()) {
+			return -1;
+		}else {
+			return numList.get(numList.size()-1);
 		}
 	}
 }
+
