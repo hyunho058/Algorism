@@ -2,3 +2,5 @@ greedy/LawOfLarge.java
  greedy.LawOfLarge
 greedy/NumberCardsGame.java
  greedy.NumberCardsGame
+greedy/UntilOne.java
+ greedy.UntilOne
