@@ -17,7 +17,6 @@ public class MultipleOrAdd {
                 continue;
             }
 
-
             if (i == 0){
                 resultSum = Character.getNumericValue(numList.charAt(i));
             }else {

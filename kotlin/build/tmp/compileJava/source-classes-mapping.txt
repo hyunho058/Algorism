@@ -1,10 +1,14 @@
 greedy/UntilOne.java
  greedy.UntilOne
-greedy/LawOfLarge.java
- greedy.LawOfLarge
-greedy/NumberCardsGame.java
- greedy.NumberCardsGame
-greedy/MultipleOrAdd.java
- greedy.MultipleOrAdd
 greedy/GuildMember.java
  greedy.GuildMember
+greedy/NumberCardsGame.java
+ greedy.NumberCardsGame
+greedy/LawOfLarge.java
+ greedy.LawOfLarge
+greedy/MultipleOrAdd.java
+ greedy.MultipleOrAdd
+greedy/ReverseString.java
+ greedy.ReverseString
+greedy/CannotMade.java
+ greedy.CannotMade
