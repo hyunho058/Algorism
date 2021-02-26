@@ -12,3 +12,5 @@ greedy/ReverseString.java
  greedy.ReverseString
 greedy/CannotMade.java
  greedy.CannotMade
+greedy/NumberOfCases.java
+ greedy.NumberOfCases
