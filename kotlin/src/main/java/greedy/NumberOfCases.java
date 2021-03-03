@@ -10,7 +10,7 @@ public class NumberOfCases {
         int[] numberList = new int[N];
         for (int i = 0; i < N; i++){
             if ((numberList[i] = scanner.nextInt()) > M){
-                System.out.println("3 보다 큽니다 다시 입력하세요");
+                System.out.println(M+" 보다 큽니다 다시 입력하세요");
                 i--;
             }
         }

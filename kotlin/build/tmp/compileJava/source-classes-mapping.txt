@@ -12,5 +12,9 @@ greedy/ReverseString.java
  greedy.ReverseString
 greedy/CannotMade.java
  greedy.CannotMade
+greedy/MukbangLive.java
+ greedy.MukbangLive
 greedy/NumberOfCases.java
  greedy.NumberOfCases
+implementation/UpDownLeftRight.java
+ implementation.UpDownLeftRight
