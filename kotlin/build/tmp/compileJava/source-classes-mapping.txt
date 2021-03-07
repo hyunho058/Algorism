@@ -18,3 +18,5 @@ greedy/NumberOfCases.java
  greedy.NumberOfCases
 implementation/UpDownLeftRight.java
  implementation.UpDownLeftRight
+implementation/Time.java
+ implementation.Time
