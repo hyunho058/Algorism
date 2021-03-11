@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f3ff8df-996e-4038-851b-4b394d4660f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/implementation/LuckyStraight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5f3ff8df-996e-4038-851b-4b394d4660f1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,7 +181,7 @@
       <workItem from="1615202137565" duration="2617000" />
       <workItem from="1615250470323" duration="1101000" />
       <workItem from="1615289863656" duration="4475000" />
-      <workItem from="1615422173516" duration="1513000" />
+      <workItem from="1615422173516" duration="1885000" />
     </task>
     <servers />
   </component>
