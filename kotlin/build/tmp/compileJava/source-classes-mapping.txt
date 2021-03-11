@@ -22,3 +22,5 @@ greedy/MultipleOrAdd.java
  greedy.MultipleOrAdd
 implementation/Knight.java
  implementation.Knight
+implementation/LuckyStraight.java
+ implementation.LuckyStraight
