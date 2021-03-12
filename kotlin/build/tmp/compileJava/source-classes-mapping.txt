@@ -24,3 +24,5 @@ implementation/Knight.java
  implementation.Knight
 implementation/LuckyStraight.java
  implementation.LuckyStraight
+implementation/StringReSort.java
+ implementation.StringReSort
