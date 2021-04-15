@@ -15,7 +15,7 @@ public class StringReSort{
         int sumNumber = 0;
         String[] strList = str.split("");
         Arrays.sort(strList);;
-        
+
         for (int i = 0; i < strList.length; i++){
             if ((int)strList[i].charAt(0) >= 40 && (int)strList[i].charAt(0) <= 57){
                 sumNumber += Integer.parseInt(strList[i]);
