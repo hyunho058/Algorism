@@ -28,3 +28,5 @@ implementation/LuckyStraight.java
  implementation.LuckyStraight
 dfs_bfs/bj_no_1260.java
  dfs_bfs.bj_no_1260
+dfs_bfs/bj_no_2606.java
+ dfs_bfs.bj_no_2606
