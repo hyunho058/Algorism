@@ -42,6 +42,7 @@ public class bj_no_2667 {
             }
         }
 
+        //n*n map에 1이면서 방문을 하지 않은 위치 찾기
         for(int i=0; i<n; i++){
             for(int j=0; j<n; j++){
                 if(map[i][j] == 1 && !visited[i][j]){
@@ -64,6 +65,7 @@ public class bj_no_2667 {
     }
 
 
+    //방문을 설정하고 상,하,좌,우 에 1이 있는위치를 찾고 방문 처리를 한다.
     private static void dfs(int x, int y) {
         visited[x][y] = true;
         aparts[apartNum]++;
