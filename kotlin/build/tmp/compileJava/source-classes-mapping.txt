@@ -30,7 +30,7 @@ greedy/LawOfLarge.java
  greedy.LawOfLarge
 implementation/LuckyStraight.java
  implementation.LuckyStraight
-dfs_bfs/ApartNumberingDfs.java
- dfs_bfs.ApartNumberingDfs
 dfs_bfs/bj_no_2667.java
  dfs_bfs.bj_no_2667
+dfs_bfs/bj_no_1012.java
+ dfs_bfs.bj_no_1012

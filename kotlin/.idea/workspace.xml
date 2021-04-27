@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f3ff8df-996e-4038-851b-4b394d4660f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dfs_bfs/bj_no_1012.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dfs_bfs/bj_no_2667.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dfs_bfs/bj_no_2667.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../hDreamProject/spring-semo-book" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -61,7 +61,7 @@
       <recent name="greedy" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.bj_no_2667">
+  <component name="RunManager" selected="Application.bj_no_1012">
     <configuration name="ApartNumberingDfs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dfs_bfs.ApartNumberingDfs" />
       <module name="kotlin.main" />
@@ -75,12 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringReSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="implementation.StringReSort" />
+    <configuration name="bj_no_1012" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dfs_bfs.bj_no_1012" />
       <module name="kotlin.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="implementation.*" />
+          <option name="PATTERN" value="dfs_bfs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,24 +127,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.bj_no_1012" />
         <item itemvalue="Application.ApartNumberingDfs" />
         <item itemvalue="Application.bj_no_2667" />
         <item itemvalue="Application.bj_no_2606" />
         <item itemvalue="Application.bj_no_1260" />
-        <item itemvalue="Application.StringReSort" />
       </list>
     </recent_temporary>
   </component>
@@ -199,6 +201,8 @@
       <workItem from="1618964355068" duration="2867000" />
       <workItem from="1619397840438" duration="1474000" />
       <workItem from="1619437814386" duration="222000" />
+      <workItem from="1619483339319" duration="1820000" />
+      <workItem from="1619526030922" duration="6613000" />
     </task>
     <servers />
   </component>
